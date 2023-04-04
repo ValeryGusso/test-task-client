@@ -1,0 +1,25 @@
+.user,
+.profile,
+.info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 35px;
+}
+.profile,
+.info {
+	flex-direction: column;
+}
+.profile > img {
+	height: 35vh;
+	border-radius: 25px;
+}
+.profile > p {
+	font-size: 32px;
+}
+.info {
+	text-align: center;
+	font-size: 22px;
+	max-width: 35vw;
+	row-gap: 35px;
+}

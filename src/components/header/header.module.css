@@ -1,0 +1,26 @@
+.logo {
+	font-size: 38px;
+	color: var(--main-text);
+	font-weight: bold;
+	user-select: none;
+}
+.menu {
+	display: flex;
+	align-items: center;
+	column-gap: 50px;
+}
+.menu__list {
+	display: flex;
+	column-gap: 25px;
+	font-size: 20px;
+}
+.active a {
+	color: var(--active-text);
+}
+.login {
+	font-size: 20px;
+	padding: 5px 20px;
+	background: var(--active-text);
+	border-radius: 5px;
+	cursor: pointer;
+}
