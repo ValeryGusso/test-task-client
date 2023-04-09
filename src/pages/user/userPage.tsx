@@ -8,6 +8,7 @@ import defaultAfatar from '../../assets/img/default_avatar.jpg'
 const UserPage: FC = () => {
 	const [user, setUser] = useState<User | null>(null)
 	const [loading, setLoading] = useState(true)
+	const [loadingError, setLoadingError] = useState(false)
 	const params = useParams()
 
 	useEffect(() => {
@@ -29,7 +30,11 @@ const UserPage: FC = () => {
 			) : user ? (
 				<div className={cls.user}>
 					<div className={cls.profile}>
-						<img src={user.avatar || defaultAfatar} alt="avatar" />
+						<img
+							src={loadingError ? defaultAfatar : user.avatar || defaultAfatar}
+							alt="avatar"
+							onError={() => setLoadingError(true)}
+						/>
 						<p>{user.login}</p>
 					</div>
 					<div className={cls.info}>
