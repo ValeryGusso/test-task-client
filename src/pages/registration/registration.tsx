@@ -59,7 +59,6 @@ const Registration: FC = () => {
 			password: pass,
 		})
 			.then(res => {
-				console.log(res)
 				if (res.status === 200 && res.data.success) {
 					dispatch(authReducers.setUser(res.data.user))
 					localStorage.setItem('accessToken', res.data.access)
@@ -67,7 +66,6 @@ const Registration: FC = () => {
 				}
 			})
 			.catch((err: AxiosError<Record<string, any>>) => {
-				console.log(err)
 				if (err?.response?.status === 400) {
 					if (err.response?.data?.message.includes('Пользователь')) {
 						setErrorLogin({ isError: true, message: err.response?.data?.message })

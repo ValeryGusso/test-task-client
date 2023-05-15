@@ -15,6 +15,11 @@ export interface User {
 	updatedAt: string
 }
 
+export interface WakeupResponse {
+	message: string
+	success: boolean
+}
+
 export interface LogoutResponse {
 	success: boolean
 }

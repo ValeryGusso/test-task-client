@@ -21,8 +21,8 @@ const UserPage: FC = () => {
 			.finally(() => {
 				setLoading(false)
 			})
-		console.log(params)
 	}, [params.id])
+
 	return (
 		<div>
 			{loading ? (
